@@ -19,7 +19,6 @@ public class User {
     @NotBlank
     private String password;
     
-    @NotBlank
     private String passwordConfirm;
     
     private boolean admin;
