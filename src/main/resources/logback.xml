@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+	<substitutionProperty name="logbase" value="${catalina.base}/logs/" />
     <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>um.log</file>
+        <file>${logbase}/um.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>logs/um-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>${logbase}/um-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <maxFileSize>10MB</maxFileSize>    
             <maxHistory>10</maxHistory>
             <totalSizeCap>1GB</totalSizeCap>
